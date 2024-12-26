@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #171717;
+    color: #2188e7;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.maincircle {
+    position: relative;
+    height: 300px;
+    width: 300px;
+}
+
+.circle {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: .9;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 0 75px #2188e7;
+    border-radius: 50%;
+    animation: spinPlus 2s infinite ease-in-out;
+}
+
+@keyframes spinPlus {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.11);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.circle1 {
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 183, 229, 0.9);
+    border-left: 5px solid rgba(0, 0, 0, 0);
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 75px #2188e7;
+    animation: spinPlusoff 5s infinite ease-in-out;
+}
+
+@keyframes spinPlusoff {
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1);
+    }
+}
+
+.bars {
+    position: absolute;
+    z-index: 3;
+    width: 60px;
+    height: 60px;
+    top: calc(50% - 30px);
+    /* Center vertically */
+    left: calc(50% - 30px);
+    /* Center horizontally */
+}
+
+li {
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-right: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes loaderBar {
+    0% {
+        height: 10px;
+        margin-top: 25px;
+    }
+    50% {
+        height: 50px;
+        margin-top: 0;
+    }
+    100% {
+        height: 10px;
+        margin-top: 25px;
+    }
+}
+
+li:nth-child(1) {
+    animation: loaderBar 0.6s infinite 0s;
+}
+
+li:nth-child(2) {
+    animation: loaderBar 0.6s infinite -0.3s;
+}
+
+li:nth-child(3) {
+    animation: loaderBar 0.6s infinite -0.5s;
+}
+
+
+/* CSS */
+.button-21 {
+    margin: 5px;
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-21:active,
+.button-21:focus {
+  outline: none;
+}
+
+.button-21:hover {
+  background-position: -20px -20px;
+}
+
+.button-21:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
